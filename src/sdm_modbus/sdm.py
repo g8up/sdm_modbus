@@ -370,6 +370,11 @@ class SDM630(SDM):
             "measurement_mode": (0xf920, 2, meter.registerType.HOLDING, meter.registerDataType.FLOAT32, int, "Measurement Mode", [
                 0x0, "Total Imported", "Total Imported + Exported", "Total Imported - Exported"], 2, 1),
             "running_time": (0xf930, 2, meter.registerType.HOLDING, meter.registerDataType.FLOAT32, int, "Running Time", "h", 2, 1),
-            "serial_number": (0xfc00, 2, meter.registerType.HOLDING, meter.registerDataType.UINT32, int, "Serial Number", "", 3, 1)
+            "serial_number": (0xfc00, 2, meter.registerType.HOLDING, meter.registerDataType.UINT32, int, "Serial Number", "", 3, 1),
+            "pass": (0x0028, 2, meter.registerType.HOLDING, meter.registerDataType.FLOAT32, int, "Password", "", 1, 1),
+            "ct1": (0x0032, 2, meter.registerType.HOLDING, meter.registerDataType.FLOAT32, float, "CT1", "A", 1, 1),
+            "ct2": (0x0034, 2, meter.registerType.HOLDING, meter.registerDataType.FLOAT32, float, "CT2", "A", 1, 1),
+            "ct_ratio": (0x003e, 2, meter.registerType.HOLDING, meter.registerDataType.FLOAT32, float, "CT Ratio", "", 1, 1),
+            "pt_ratio": (0x0040, 2, meter.registerType.HOLDING, meter.registerDataType.FLOAT32, float, "PT Ratio", "", 1, 1),
         }
 
